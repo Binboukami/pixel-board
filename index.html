@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial scale = 1.0">
+    <title>Pixel Board</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tourney:wght@400;500;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="app">
+        <header tabindex="0">pixel board</header>
+    <div class="field">
+        <canvas id="canvas"></canvas>
+        <div class="tools">
+            <button onclick="undo_last()" type="button" class="button">undo</button>
+            <button onclick="clear_canvas()" type="button" class="button">clear</button>
+            
+            <div onclick="change_color(this)" class="color-field" style="background:red"></div>
+            <div onclick="change_color(this)" class="color-field" style="background:greenyellow"></div>
+            <div onclick="change_color(this)" class="color-field" style="background:lightseagreen"></div>
+
+            <input oninput="draw_color = this.value" type="color" class="color-picker">
+            <input oninput="draw_width = this.value" type="range" min="8" max="50" class="pen-range">
+        </div>
+    </div>
+    </section>
+    <footer onmouseover="change_color(this)">powered by html5/css/javascript</footer>
+</body>
+<script src="src/main.js">
+</script>
+</html>
